@@ -1,8 +1,12 @@
+import Header from "./components/header/Header";
+import MatchDetails from "./components/matchDetails/MatchDetails";
+
 function App() {
   return (
-    <>
-      <div>Checkd Widget</div>
-    </>
+    <main>
+      <Header />
+      <MatchDetails />
+    </main>
   );
 }
 
