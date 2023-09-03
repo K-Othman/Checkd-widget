@@ -9,7 +9,7 @@ const Header = () => {
   }
 
   if (!matchesDetails.match || !matchesDetails.match.description) {
-    return <p>Data is not available</p>;
+    return <p>Please wait while we are preparing the data for you!</p>;
   }
 
   return (

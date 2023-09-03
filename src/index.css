@@ -25,3 +25,8 @@
   padding: 10px 0;
   outline: none;
 }
+
+.tab2:focus {
+  background-color: black;
+  color: white;
+}

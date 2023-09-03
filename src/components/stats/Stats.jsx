@@ -2,14 +2,14 @@ import { Tab } from "@headlessui/react";
 
 const Stats = () => {
   return (
-    <section>
-      <h2 className="text-center font-bold">General</h2>
+    <section className="bg-white">
+      <h2 className="text-center font-bold my-3 pt-4">General</h2>
       <div>
         <Tab.Group>
-          <Tab.List className="text-center">
-            <Tab>Tab 1</Tab>
-            <Tab>Tab 2</Tab>
-            <Tab>Tab 3</Tab>
+          <Tab.List className="text-center flex justify-center gap-3">
+            <Tab className="tab2 rounded-3xl px-3 py-1">Full Time</Tab>
+            <Tab className="tab2 rounded-3xl px-3 py-1">1st Half</Tab>
+            <Tab className="tab2 rounded-3xl px-3 py-1">2nd Half</Tab>
           </Tab.List>
           <Tab.Panels>
             <Tab.Panel>Content 1</Tab.Panel>
