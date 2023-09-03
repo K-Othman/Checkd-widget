@@ -30,7 +30,7 @@ const Possession = () => {
   return (
     <div>
       <div>
-        <h3 className="text-center mt-4 mb-1">Possession</h3>
+        <h3 className="text-center mt-4">Possession</h3>
         <div className="flex gap-4">
           <div className="flex-1">
             <span className="flex justify-end mb-2">{homePossession}%</span>

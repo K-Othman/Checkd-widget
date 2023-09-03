@@ -34,7 +34,7 @@ const Shots = () => {
   return (
     <div>
       <div>
-        <h3 className="text-center mt-4 mb-1">Shots</h3>
+        <h3 className="text-center mt-4">Shots</h3>
         <div className="flex gap-4">
           <div className="flex-1">
             <span className="flex mb-2">{homeShots}</span>
