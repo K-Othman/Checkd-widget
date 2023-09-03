@@ -1,13 +1,14 @@
 import FHPossession from "../fhPossession/FHPossession";
+import FHShots from "../fhShots/FHShots";
 
 const FirstHalf = () => {
   return (
     <section className="p-2 pb-5">
       <FHPossession />
-      {/* <Shots />
-    <ShotsOnTarget />
-    <Corners />
-    <Cards /> */}
+      <FHShots />
+      {/* <ShotsOnTarget /> */}
+      {/* <Corners /> */}
+      {/* <Cards /> */}
     </section>
   );
 };
