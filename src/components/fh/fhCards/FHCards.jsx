@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { MatchDetailsContext } from "../../../context/matchDetailsContext/MatchDetailsContext";
 
-const Cards = () => {
+const FHCards = () => {
   const { matchesDetails } = useContext(MatchDetailsContext);
 
   if (
@@ -15,31 +15,31 @@ const Cards = () => {
 
   const yellowHomeCardStat =
     matchesDetails.match.liveData.lineups.home.stats.find(
-      (stat) => stat.type === "totalYellowCard" && stat.value
+      (stat) => stat.type === "totalYellowCard" && stat.fh
     );
 
   const redHomeCardStat = matchesDetails.match.liveData.lineups.home.stats.find(
-    (stat) => stat.type === "totalRedCard" && stat.value
+    (stat) => stat.type === "totalRedCard" && stat.fh
   );
 
   const yellowAwayCardStat =
     matchesDetails.match.liveData.lineups.away.stats.find(
-      (stat) => stat.type === "totalYellowCard" && stat.value
+      (stat) => stat.type === "totalYellowCard" && stat.fh
     );
 
   const redAwayCardStat = matchesDetails.match.liveData.lineups.home.stats.find(
-    (stat) => stat.type === "totalRedCard" && stat.value
+    (stat) => stat.type === "totalRedCard" && stat.fh
   );
 
   const homeYellowCards = yellowHomeCardStat
-    ? Number(yellowHomeCardStat.value)
+    ? Number(yellowHomeCardStat.fh)
     : 0;
   const awayYellowCards = yellowAwayCardStat
-    ? Number(yellowAwayCardStat.value)
+    ? Number(yellowAwayCardStat.fh)
     : 0;
 
-  const homeRedCards = redHomeCardStat ? Number(redHomeCardStat.value) : 0;
-  const awayRedCards = redAwayCardStat ? Number(redAwayCardStat.value) : 0;
+  const homeRedCards = redHomeCardStat ? Number(redHomeCardStat.fh) : 0;
+  const awayRedCards = redAwayCardStat ? Number(redAwayCardStat.fh) : 0;
 
   return (
     <div className="flex justify-between mt-3">
@@ -108,4 +108,4 @@ const Cards = () => {
   );
 };
 
-export default Cards;
+export default FHCards;
