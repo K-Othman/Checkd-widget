@@ -1,6 +1,7 @@
 import { useContext } from "react";
-import { MatchDetailsContext } from "../../context/matchDetailsContext/MatchDetailsContext";
+
 import { Progress } from "@material-tailwind/react";
+import { MatchDetailsContext } from "../../../context/matchDetailsContext/MatchDetailsContext";
 
 const Corners = () => {
   const { matchesDetails } = useContext(MatchDetailsContext);
@@ -23,8 +24,6 @@ const Corners = () => {
   if (!homeStat || !awayStat) {
     return <p>Possession data not available for this match.</p>;
   }
-
-  console.log(matchesDetails.match.liveData.lineups.away.stats);
 
   const homeCorener = Number(homeStat.value);
   const awaycorner = Number(awayStat.value);

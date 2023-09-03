@@ -1,6 +1,7 @@
 import { useContext } from "react";
-import { MatchDetailsContext } from "../../context/matchDetailsContext/MatchDetailsContext";
+
 import { Progress } from "@material-tailwind/react";
+import { MatchDetailsContext } from "../../../context/matchDetailsContext/MatchDetailsContext";
 
 const Shots = () => {
   const { matchesDetails } = useContext(MatchDetailsContext);
