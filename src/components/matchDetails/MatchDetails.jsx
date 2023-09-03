@@ -6,7 +6,7 @@ const MatchDetails = () => {
   return (
     <section className="w-[100%] bg-[#F2F3F4]">
       <Tab.Group defaultIndex={defaultTabIndex}>
-        <Tab.List className="flex font-bold">
+        <Tab.List className="flex items-center font-bold md:text-base text-sm  h-0 p-5 pb-3 mb-2">
           <Tab className="tab">Overview</Tab>
           <Tab className="tab">General</Tab>
           <Tab className="tab">ARS</Tab>
