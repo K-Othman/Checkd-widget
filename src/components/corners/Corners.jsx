@@ -24,7 +24,7 @@ const Corners = () => {
     return <p>Possession data not available for this match.</p>;
   }
 
-  console.log(matchesDetails.match.liveData.lineups.home.stats);
+  console.log(matchesDetails.match.liveData.lineups.away.stats);
 
   const homeCorener = Number(homeStat.value);
   const awaycorner = Number(awayStat.value);

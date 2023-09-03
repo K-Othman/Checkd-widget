@@ -1,3 +1,4 @@
+import Cards from "../cards/Cards";
 import Corners from "../corners/Corners";
 import Possession from "../possession/Possession";
 import Shots from "../shots/Shots";
@@ -10,6 +11,7 @@ const FullTime = () => {
       <Shots />
       <ShotsOnTarget />
       <Corners />
+      <Cards />
     </section>
   );
 };
