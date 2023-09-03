@@ -1,3 +1,4 @@
+import SHCorners from "../shCorners/SHCorners";
 import SHPossession from "../shPoessession/SHPossession";
 import SHShots from "../shShots/SHShots";
 import SHShotsOnTarget from "../shShotsOnTarget/SHShotsOnTarget";
@@ -8,7 +9,7 @@ const SecondHalf = () => {
       <SHPossession />
       <SHShots />
       <SHShotsOnTarget />
-      {/* <FHCorners /> */}
+      <SHCorners />
       {/* <FHCards /> */}
     </section>
   );
