@@ -1,5 +1,5 @@
 import { Tab } from "@headlessui/react";
-import Stats from "../ft/stats/Stats";
+import Stats from "../stats/Stats";
 
 const MatchDetails = () => {
   const defaultTabIndex = 1;
