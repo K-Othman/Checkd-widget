@@ -1,8 +1,8 @@
+import { MatchDetailsContext } from "../../../context/matchDetailsContext/MatchDetailsContext";
 import { useContext } from "react";
 import { Progress } from "@material-tailwind/react";
-import { MatchDetailsContext } from "../../../context/matchDetailsContext/MatchDetailsContext";
 
-const Shots = () => {
+const SHShots = () => {
   const { matchesDetails } = useContext(MatchDetailsContext);
 
   if (
@@ -14,18 +14,18 @@ const Shots = () => {
   }
 
   const homeStat = matchesDetails.match.liveData.lineups.home.stats.find(
-    (stat) => stat.type === "totalScoringAtt" && stat.value
+    (stat) => stat.type === "totalScoringAtt" && stat.sh
   );
   const awayStat = matchesDetails.match.liveData.lineups.away.stats.find(
-    (stat) => stat.type === "totalScoringAtt" && stat.value
+    (stat) => stat.type === "totalScoringAtt" && stat.sh
   );
 
   if (!homeStat || !awayStat) {
     return <p>Possession data not available for this match.</p>;
   }
 
-  const homeShots = Number(homeStat.value);
-  const awayShots = Number(awayStat.value);
+  const homeShots = Number(homeStat.sh);
+  const awayShots = Number(awayStat.sh);
 
   const totalShots = homeShots + awayShots;
   const homeShotsPercentage = (homeShots / totalShots) * 100;
@@ -50,4 +50,4 @@ const Shots = () => {
   );
 };
 
-export default Shots;
+export default SHShots;

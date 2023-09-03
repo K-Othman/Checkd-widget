@@ -1,8 +1,7 @@
 import { useContext } from "react";
 import { Progress } from "@material-tailwind/react";
 import { MatchDetailsContext } from "../../../context/matchDetailsContext/MatchDetailsContext";
-
-const Shots = () => {
+const SHPossession = () => {
   const { matchesDetails } = useContext(MatchDetailsContext);
 
   if (
@@ -14,35 +13,31 @@ const Shots = () => {
   }
 
   const homeStat = matchesDetails.match.liveData.lineups.home.stats.find(
-    (stat) => stat.type === "totalScoringAtt" && stat.value
+    (stat) => stat.type === "possessionPercentage" && stat.sh
   );
   const awayStat = matchesDetails.match.liveData.lineups.away.stats.find(
-    (stat) => stat.type === "totalScoringAtt" && stat.value
+    (stat) => stat.type === "possessionPercentage" && stat.sh
   );
 
   if (!homeStat || !awayStat) {
     return <p>Possession data not available for this match.</p>;
   }
 
-  const homeShots = Number(homeStat.value);
-  const awayShots = Number(awayStat.value);
-
-  const totalShots = homeShots + awayShots;
-  const homeShotsPercentage = (homeShots / totalShots) * 100;
-  const awayShotsPercentage = (awayShots / totalShots) * 100;
+  const homePossession = Number(homeStat.sh);
+  const awayPossession = Number(awayStat.sh);
 
   return (
     <div>
       <div>
-        <h3 className="text-center mt-4">Shots</h3>
+        <h3 className="text-center mt-4">Possession</h3>
         <div className="flex gap-4">
           <div className="flex-1">
-            <span className="flex mb-2">{homeShots}</span>
-            <Progress value={homeShotsPercentage} color="amber" />
+            <span className="flex justify-end mb-2">{homePossession}%</span>
+            <Progress value={homePossession} color="amber" />
           </div>
           <div className="flex-1">
-            <span className="flex justify-end mb-2">{awayShots}</span>
-            <Progress value={awayShotsPercentage} color="green" />
+            <span className="flex justify-end mb-2">{awayPossession}%</span>
+            <Progress value={awayPossession} color="green" />
           </div>
         </div>
       </div>
@@ -50,4 +45,4 @@ const Shots = () => {
   );
 };
 
-export default Shots;
+export default SHPossession;

@@ -1,6 +1,7 @@
 import { Tab } from "@headlessui/react";
 import FullTime from "../FT/fullTime/FullTime";
 import FirstHalf from "../fh/firstHalf/FirstHalf";
+import SecondHalf from "../sh/secondHalf/SecondHalf";
 
 const Stats = () => {
   return (
@@ -20,7 +21,9 @@ const Stats = () => {
             <Tab.Panel>
               <FirstHalf />
             </Tab.Panel>
-            <Tab.Panel>Content 3</Tab.Panel>
+            <Tab.Panel>
+              <SecondHalf />
+            </Tab.Panel>
           </Tab.Panels>
         </Tab.Group>
       </div>

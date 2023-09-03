@@ -18,7 +18,7 @@ const FHPossession = () => {
     (stat) => stat.type === "possessionPercentage" && stat.fh
   );
   const awayStat = matchesDetails.match.liveData.lineups.away.stats.find(
-    (stat) => stat.type === "possessionPercentage" && stat.value
+    (stat) => stat.type === "possessionPercentage" && stat.fh
   );
 
   if (!homeStat || !awayStat) {
